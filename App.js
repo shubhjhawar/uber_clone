@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import MapScreen from './screens/MapScreen';
+import LocationScreen from './screens/LocationScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -20,7 +21,7 @@ export default function App() {
             style={{flex:1}}
             keyboardVerticalOffset={Platform.OS === 'ios' ? -64 : 0}
           >
-            <Stack.Navigator>
+            {/* <Stack.Navigator>
               <Stack.Screen 
                 name="HomeScreen"
                 component={HomeScreen}
@@ -32,6 +33,15 @@ export default function App() {
               <Stack.Screen 
                 name="MapScreen"
                 component={MapScreen}
+                options={{
+                  headerShown:false
+                }}
+              />
+            </Stack.Navigator> */}
+            <Stack.Navigator>
+              <Stack.Screen 
+                name="LocationScreen"
+                component={LocationScreen}
                 options={{
                   headerShown:false
                 }}
